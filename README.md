@@ -1,49 +1,73 @@
 # Cyclops
-This simple program is used to download and manage files from websites
 
-## The current websites with funcitonality are 
-- youtube.com
-- instagram.com
-- x.com (twitter)
+A simple program for downloading and managing videos from websites.
 
-# Requirements & Setup
+### Supported Websites
+- YouTube (`youtube.com`)
+- Instagram (`instagram.com`)
+- X / Twitter (`x.com`)
 
-## Requirements
-Python
+---
 
-## Setup 
-Setup is for windows only but can be delployed to linux file system
+## Requirements & Setup
 
-### Install Requirements
-#### All listed in requirents file
-#### These are listed for external deployment in the requirements.txt file
+### Requirements
+- Python 3
+- FFmpeg
 
-1. pip install flask 
-2. pip install yt-dlp[default] 
-3. pip install gunicorn
+### Setup
+Setup instructions are for **Windows**, but the app can also be deployed on Linux.
 
-### Install FFMPEG
-#### This is is the program that actually downloads vidoess
+#### 1. Install Python Packages
+All packages are listed in `requirements.txt` for external deployment.
+
+```bash
+pip install -r requirements.txt
+```
+
+Or install them one at a time:
+
+```bash
+pip install flask
+pip install "yt-dlp[default]"
+pip install gunicorn
+```
+
+#### 2. Install FFmpeg
+yt-dlp uses FFmpeg to merge and convert video and audio files.
+
+```bash
 winget install Gyan.FFmpeg
+```
 
+---
 
 ## Running
 
-1. To verify isntallation, in a terminal, run python .\app.py
-2. Open up the local URL listed in console and attempt to download a youtube video.
-3. On success, deploy where needed.
+1. To verify the install, run this in a terminal:
+   ```bash
+   python .\app.py
+   ```
+2. Open the local URL shown in the console and try downloading a YouTube video.
+3. If it works, deploy it wherever you need it.
 
-# Examples of Use Cases
-1. Short term use
-- Using locally for small and short term tasks
-2. Embedded Deployment for long term use
-- Deploying to an embedded device to run 24/7
-- This is easily done with a server or NAS, it is reccommended to use a linux based system
-3. External Deployment
-- Hosting this program as a service
+---
 
-# Major Versions and Usese
+## Use Cases
 
-## 1.0
-- User can download videos and purge ALL videos from download destination
-- User cannot view prior downloaded videos
+1. **Short-term local use**
+   - Run it on your own machine for small, quick tasks.
+2. **Embedded deployment (long-term)**
+   - Deploy it to an always-on device so it runs 24/7.
+   - A server or NAS works well for this. A Linux-based system is recommended.
+3. **External deployment**
+   - Host it as a service for other people to use.
+
+---
+
+## Versions
+
+### v1.0
+- Download videos
+- Purge **all** videos from the download folder
+- Viewing previously downloaded videos is not supported yet
