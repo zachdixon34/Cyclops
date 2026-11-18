@@ -18,9 +18,9 @@ Setup is for windows only but can be delployed to linux file system
 #### All listed in requirents file
 #### These are listed for external deployment in the requirements.txt file
 
-pip install flask 
-pip install yt-dlp[default] 
-pip install gunicorn
+1. pip install flask 
+2. pip install yt-dlp[default] 
+3. pip install gunicorn
 
 ### Install FFMPEG
 #### This is is the program that actually downloads vidoess
